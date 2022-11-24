@@ -19,29 +19,40 @@
         <h1 class="main__title">Basketball Scoreboard</h1>
 
         <div class="main__subtitle">
-            <p class="subtitle__text">Basketball Scoreboard is a tiny project for <a href="https://scrimba.com/learn/learnjavascript/solo-project-basketball-scoreboard-cz9adVfP">scrimba.com</a> — great platform for study JS and other things. You can add points to team and start a new game with a new score.</p>
-            <button class="subtitle__btn_main" id="btn-newGame" onclick="newGame()">New Game</button>
+            <p class="subtitle__text">Basketball Scoreboard is a tiny project for <a
+                    href="https://scrimba.com/learn/learnjavascript/solo-project-basketball-scoreboard-cz9adVfP">scrimba.com</a>
+                — great platform for study JS and other things. You can add points to team and start a new game with a
+                new score.</p>
+            <button class="subtitle__btn_main" onclick="newGame()">New Game</button>
         </div>
 
         <div class="main__scoreboard">
 
             <div class="team">
+                <div class="leader" id="leader_left">leader</div>
                 <div class="team__name">Home</div>
-                <div class="team__score"><div class="team__score_text" id="scoreLeft">0</div></div>
+                <div class="team__score">
+                    
+                    <div class="team__score_text" id="scoreLeft">0</div>
+                </div>
                 <div class="team__buttons">
-                    <button class="btn_plus" id="leftPlus1" onclick="plus(1, 'L')">+1</button>
-                    <button class="btn_plus" id="LeftPlus2" onclick="plus(2, 'L')">+2</button>
-                    <button class="btn_plus" id="LeftPlus3" onclick="plus(3, 'L')">+3</button>
+                    <button class="btn_plus" id="leftPlus1" onclick="plus(1, 'home')">+1</button>
+                    <button class="btn_plus" id="LeftPlus2" onclick="plus(2, 'home')">+2</button>
+                    <button class="btn_plus" id="LeftPlus3" onclick="plus(3, 'home')">+3</button>
                 </div>
             </div>
 
             <div class="team">
+                <div class="leader" id="leader_right">leader</div>
                 <div class="team__name">Guest</div>
-                <div class="team__score"><div class="team__score_text" id="scoreRight">0</div></div>
+                <div class="team__score">
+                    
+                    <div class="team__score_text" id="scoreRight">0</div>
+                </div>
                 <div class="team__buttons">
-                    <button class="btn_plus" id="RightPlus1" onclick="plus(1, 'R')">+1</button>
-                    <button class="btn_plus" id="RightPlus2" onclick="plus(2, 'R')">+2</button>
-                    <button class="btn_plus" id="RightPlus3" onclick="plus(3, 'R')">+3</button>
+                    <button class="btn_plus" id="RightPlus1" onclick="plus(1, 'guest')">+1</button>
+                    <button class="btn_plus" id="RightPlus2" onclick="plus(2, 'guest')">+2</button>
+                    <button class="btn_plus" id="RightPlus3" onclick="plus(3, 'guest')">+3</button>
                 </div>
             </div>
         </div>

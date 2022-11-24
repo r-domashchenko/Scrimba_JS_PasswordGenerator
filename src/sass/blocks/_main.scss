@@ -36,6 +36,7 @@
             line-height: 0px;
             text-align: center;
             transition: 0.4s background;
+
             &:active {
                 background: linear-gradient(97.36deg, #c7c7b5 -48.94%, #c42727 88.32%);
             }
@@ -55,12 +56,14 @@
 
 .team {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-evenly;
     font-weight: 700;
     font-size: 24px;
     min-width: 275px;
     text-align: center;
+    z-index: 0;
 
     &__name {
         background-color: $color-dashboard;
@@ -109,5 +112,25 @@
         &:active {
             background-color: $color-container;
         }
+    }
+}
+
+.leader {
+    position: absolute;
+    z-index: -1;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 24px;
+    height: 200px;
+    width: 248px;
+    background: linear-gradient(97.36deg, $color-yellow 0%, #60A6E7 100%);
+    transform: rotate(-90deg);
+    border-radius: 20px;
+    padding-top: 10px;
+
+    top: 208px;
+    left: -70px;
+    &__hidden {
+        display: none;
     }
 }
