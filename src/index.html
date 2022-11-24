@@ -7,10 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basketball Scoreboard</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+    <div class="container">
+        <h1 class="main__title">Basketball Scoreboard</h1>
+
+        <div class="main__subtitle">
+            <p class="subtitle__text">Basketball Scoreboard is a tiny project for <a href="https://scrimba.com/learn/learnjavascript/solo-project-basketball-scoreboard-cz9adVfP">scrimba.com</a> — great platform for study JS and other things. You can add points to team and start a new game with a new score.</p>
+            <button class="subtitle__btn_main" id="btn-newGame">New Game</button>
+        </div>
+
+        <div class="main__scoreboard">
+
+            <div class="team">
+                <div class="team__name">Home</div>
+                <div class="team__score"><div class="team__score_text" id="scoreLeft">0</div></div>
+                <div class="team__buttons">
+                    <button class="btn_plus" id="leftPlus1" onclick="plusL(1)">+1</button>
+                    <button class="btn_plus" id="LeftPlus2" onclick="plusL(2)">+2</button>
+                    <button class="btn_plus" id="LeftPlus3" onclick="plusL(3)">+3</button>
+                </div>
+            </div>
+
+            <div class="team">
+                <div class="team__name">Guest</div>
+                <div class="team__score"><div class="team__score_text" id="scoreRight">0</div></div>
+                <div class="team__buttons">
+                    <button class="btn_plus" id="RightPlus1" onclick="plusR(1)">+1</button>
+                    <button class="btn_plus" id="RightPlus2" onclick="plusR(2)">+2</button>
+                    <button class="btn_plus" id="RightPlus3" onclick="plusR(3)">+3</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 
