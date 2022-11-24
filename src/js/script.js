@@ -1,21 +1,21 @@
-let Left = 0,
-    Right = 0,
+let homeTeamScore = 0,
+    guestTeamScore = 0,
     scoreLeft = document.getElementById('scoreLeft'),
     scoreRight = document.getElementById('scoreRight');
 
 function plus(count, side) {
     if (side === 'R') {
-        Right += count;
-        scoreRight.textContent = Right;
+        guestTeamScore += count;
+        scoreRight.textContent = guestTeamScore;
     } else {
-        Left += count;
-        scoreLeft.textContent = Left;
+        homeTeamScore+= count;
+        scoreLeft.textContent = homeTeamScore;
     }
 };
 
 function newGame() {
-    Left = 0;
-    Right = 0;
+    homeTeamScore = 0,
+    guestTeamScore = 0;
     scoreLeft.textContent = 0;
     scoreRight.textContent = 0;
 };
