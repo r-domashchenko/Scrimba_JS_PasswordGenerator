@@ -116,21 +116,24 @@
 }
 
 .leader {
+    transition: 0.5s all;
     position: absolute;
     z-index: -1;
     font-weight: 700;
     font-size: 26px;
     line-height: 24px;
     height: 200px;
-    width: 248px;
+    width: 250px;
     background: linear-gradient(97.36deg, $color-yellow 0%, #60A6E7 100%);
     transform: rotate(-90deg);
     border-radius: 20px;
     padding-top: 10px;
-
     top: 208px;
-    left: -70px;
-    &__hidden {
-        display: none;
+
+    &_visible {
+        left: -70px;
+    }
+    &_hidden {
+        left: 0px;
     }
 }
