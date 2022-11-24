@@ -7,6 +7,7 @@ let homeTeamScore = 0,
     leaderRight = document.getElementById('leader_right');
 
 function plus(count, side) {
+    console.log('add function')
     if (side === 'guest') {
         guestTeamScore += count;
         scoreRight.textContent = guestTeamScore;
@@ -18,6 +19,7 @@ function plus(count, side) {
 };
 
 function newGame() {
+    console.log('Clear ALL to 0')
     doHidden(leaderLeft);
     doHidden(leaderRight);
     homeTeamScore = 0,
@@ -42,17 +44,17 @@ function doHidden(varName) {
 };
 
 function showLeader() {
-    console.log('showLead function start');
+    console.log('showLeader function start - CHECKING');
     if (homeTeamScore === guestTeamScore) {
-        console.log('home and guest score are EQUAL');
+        console.log('HOME and GUEST score are EQUAL');
         doHidden(leaderLeft);
         doHidden(leaderRight);
     } else if (homeTeamScore > guestTeamScore) {
-        console.log('home is leader');
+        console.log('HOME team is a leader');
         doVisible(leaderLeft);
         doHidden(leaderRight);
         } else {
-        console.log('guest is leader');
+        console.log('GUEST team is a leader');
         doVisible(leaderRight);
         doHidden(leaderLeft);
         }
