@@ -5,15 +5,12 @@
 
 body {
     box-sizing: border-box;
-    background-color: $color-main;
+    background-color: $col-back;
 }
 
 * {
-    font-family: 'Oxanium',
-    cursive;
-    font-family: 'Roboto',
-    sans-serif;
-    color: $color-text;
+    font-family: 'Inter', sans-serif;
+    color: $col-dashboard;
 }
 
 @import 'blocks/main';
