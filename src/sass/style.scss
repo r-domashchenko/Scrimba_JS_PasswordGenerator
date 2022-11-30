@@ -4,13 +4,19 @@
 @import 'base/variables';
 
 body {
-    box-sizing: border-box;
     background-color: $col-back;
+}
+
+section {
+    box-sizing: border-box;
 }
 
 * {
     font-family: 'Inter', sans-serif;
     color: $col-dashboard;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
 }
 
 @import 'blocks/main';
