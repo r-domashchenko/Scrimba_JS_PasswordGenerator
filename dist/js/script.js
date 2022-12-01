@@ -7,7 +7,7 @@ let charactersNumber = 15,
     password1 = document.querySelector('#pas-1'),
     password2 = document.querySelector('#pas-2');
 
-console.log('довжина пароля ' + charactersNumber);
+console.log('стандартна довжина пароля: ' + charactersNumber + ' символів');
 
 function charactersRandomizer() {
     randomIndex = Math.floor(Math.random() * characters.length);
@@ -15,8 +15,11 @@ function charactersRandomizer() {
 };
 
 function createPasswords() {
+    lengthChange(); // оновлюємо довжину пароля для підстраховки ввода
     let pass1 = '',
         pass2 = '';
+    console.log('запущена генерація паролів!');
+    console.log('довжина згенерованого пароля: ' + charactersNumber + ' символів');
     for (let i = 0; i < charactersNumber; i++) {
         charactersRandomizer();
         pass1 += characters[randomIndex];
@@ -25,8 +28,26 @@ function createPasswords() {
         pass2 += characters[randomIndex];
         password2.textContent = pass2;
     };
+    console.log('паролі згенеровано');
 };
 
-generatePassBtn.addEventListener("click", createPasswords)
+function lengthChange() {
+    console.log('запущена функція зміни довжини!');
+    window.addEventListener('keydown', function (e) {
+        if (e.keyIdentifier == 'U+000A' || e.keyIdentifier == 'Enter' || e.keyCode == 13) {
+            if (e.target.nodeName == 'INPUT' && e.target.type == 'number') {
+                e.preventDefault();
+                return false;
+            }
+        }
+    }, true);
+    charactersNumber = document.querySelector('#inputLength').value;
+    console.log('введена довжина пароля: ' + charactersNumber + ' символів');
+};
+
+generatePassBtn.addEventListener("click", createPasswords);
+
+inputLength.addEventListener("click", lengthChange, false);
+inputLength.addEventListener("keydown", lengthChange, false);
 
 
