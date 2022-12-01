@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     .main-info {
-        max-width: 50%;
+        max-width: 100%;
     }
     .main-options {
         display: none;
@@ -61,7 +61,7 @@
 }
 
 .subtitle {
-    max-width: 290px;
+    max-width: 100%;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -76,7 +76,7 @@
 .field {
     margin-top: 45px;
     background-color: $col-dashboard;
-    max-height: 240px;
+    max-height: max-content;
     padding: 34px 22px;
     .btn__main {
         cursor: pointer;
@@ -108,12 +108,13 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        margin-top: 45px;
+        margin-top: 35px;
         &_out {
             width: 290px;
             height: 48px;
             background-color: white;
             padding: 14px 5px;
+            margin-top: 10px;
                 font-weight: 400;
                 font-size: 14px;
                 letter-spacing: 0.2em;
