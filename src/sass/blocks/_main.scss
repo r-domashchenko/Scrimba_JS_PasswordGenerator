@@ -1,12 +1,49 @@
 .main-container {
     background-color: $col-container;
     min-height: min-content;
-    max-width: 680px;
+    max-width: 690px;
     margin: auto;
     margin-top: 10vh;
     padding: 75px 20px;
     position: relative;
 }
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .main-info {
+        max-width: 50%;
+    }
+    .main-options {
+        display: none;
+        padding: 20px 20px;
+        background-color: $col-dashboard;
+        &__pass-length {
+            input {
+                max-width: 40px;
+                height: 40px;
+                padding: 5px;
+                display: inline-block;
+                border: none;
+                background-color: $col-accent;
+                color: $col-dashboard;
+                text-align: center;
+            }
+
+            &_descr {
+                display: inline-block;
+                margin-left: 15px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: $col-back
+            }
+        }
+    }
+}
+
+
 
 .title {
     display: flex;
